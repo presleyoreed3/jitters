@@ -1,2 +1,4 @@
-# jitters
+# Jitters
 A caffeine management tool for everyone
+
+
