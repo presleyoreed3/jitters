@@ -26,6 +26,25 @@ In addition, this project will include:
 ## Wireframes
 
 ### Main View
+Main view of the website once logged in and showing varying levels of caffeine
 ![Main View Page](./readme_images/homepage.png)
 ### Settings
+An area to manage your settings and preferences
 ![Setting Main View](./readme_images/settings.png)
+### Daily Dose
+A daily fun fact about caffeine
+*More to come*
+
+## Technologies and APIs
+
+*Needs more research*
+
+## Implementation Timeline
+
+
+
+## Bonus Features
+
+
+
+
