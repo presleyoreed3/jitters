@@ -25,3 +25,7 @@ In addition, this project will include:
 
 ## Wireframes
 
+### Main View
+![Main View Page](./readme_images/homepage.png)
+### Settings
+![Setting Main View](./readme_images/settings.png)
