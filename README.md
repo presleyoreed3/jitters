@@ -25,6 +25,9 @@ In addition, this project will include:
 
 ## Wireframes
 
+### Default Color Scheme
+This will be the base color for the application with a bonus option to select from a number of color options (You can find the current hopeful options in teh bonus section).
+![Default Color Scheme](./readme_images/default_colors.png)
 ### Main View
 Main view of the website once logged in and showing varying levels of caffeine
 ![Main View Page](./readme_images/homepage.png)
@@ -44,7 +47,9 @@ A daily fun fact about caffeine
 
 
 ## Bonus Features
-
+### Color Schemes
+The option to pick amongs these set of color schemes.
+![Current Color Scheme options](./readme_images/color_schemes.png)
 
 
 
