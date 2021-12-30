@@ -30,12 +30,12 @@ This will be the base color for the application with a bonus option to select fr
 ### Main View
 Main view of the website once logged in and showing varying levels of caffeine
 ![Main View Page](./readme_images/homepage.png)
+### Daily Dose of Jitters
+This is an area that you can click on to get a daily fun fact about caffeine
+![Daily Dose of Jitters](./readme_images/daily_dose.png)
 ### Settings
 An area to manage your settings and preferences
 ![Setting Main View](./readme_images/settings.png)
-### Daily Dose
-A daily fun fact about caffeine
-*More to come*
 
 ## Technologies and APIs
 
@@ -54,6 +54,7 @@ A daily fun fact about caffeine
 ## Bonus Features
 ### Color Schemes
 The option to pick amongs these set of color schemes.
+
 ![Current Color Scheme options](./readme_images/color_schemes.png)
 ### Export Daily Measurements
 The ability to click a button to export your caffeine intake and history for the day for those who wish to keep more detailed records of their caffeine day over day.
