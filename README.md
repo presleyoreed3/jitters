@@ -11,10 +11,9 @@ The majority of this project will be constructed with JavaScript. Along the back
 In Jitters, users will be able to:
 
 - Input caffeinated items into a daily tracker
-- Set daily, weekly, or monthly limitis on their overall caffeine intake
-- Sign in to save and export health data for personal and medical record keeping
+- Persist data for one day that is set at the first load of the page
 - See how their caffeine levels decrease throughout the day after inputing at certain times
-- See caffeine measurements for a wide range of caffeinated drinks and foods
+- See caffeine measurements for a wide range of caffeinated drinks
 - Explore good to know information about caffeine and its affects on the body and mind
 
 In addition, this project will include: 
@@ -40,16 +39,23 @@ A daily fun fact about caffeine
 
 ## Technologies and APIs
 
-*Needs more research*
+- Caffeine Informer: https://www.caffeineinformer.com
+- *More to come*
 
 ## Implementation Timeline
 
-
+- **Thursday 12/30:** Finish the readme and ensure that website loads when running index.html. Finalize API and assemble any back end DB for said API
+- **Weekend (12/31-1/2):** Fill out my database and ensure that I have the appropriate ways to access data for my front end view
+- **Monday 1/3:** Daily dose of Jitters popup with random fact and timer for when it refreshes
+- **Tuesday 1/4:** Side bar with options for what you ard drinking and the amounts
+- **Wednesday 1/5:** Sin wave to show the level of caffeine throughout the day and a side measurement ticks to indicate overall caffeine levels in mg
+- **Thursday 1/6:** Final polishing and ensuring that all visuals have parity
 
 ## Bonus Features
 ### Color Schemes
 The option to pick amongs these set of color schemes.
 ![Current Color Scheme options](./readme_images/color_schemes.png)
-
+### Export Daily Measurements
+The ability to click a button to export your caffeine intake and history for the day for those who wish to keep more detailed records of their caffeine day over day.
 
 
