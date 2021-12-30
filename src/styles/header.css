@@ -1,6 +1,14 @@
+html * {
+	font-family: 'Montserrat', sans-serif;
+}
+
 header {
-	background-color: #7E5EF2;
-	margin-left: 10px;
+	display: flex;
+	justify-content: center;
+	background-color: #6A44F2;
 	color: #F2F2F2;
-	text-align: center;
+	align-items: center;
+	text-margin: 30px;
+	font-size: 50px;
+	height: 75px;
 }
