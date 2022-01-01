@@ -15,8 +15,9 @@ let span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
-  let wave = new Wave();
-  wave.raise();
+  // Test function to make sure the water level rises.
+  // let wave = new Wave();
+  // wave.raise();
 }
 
 // When the user clicks on <span> (x), close the modal

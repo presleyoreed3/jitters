@@ -67,34 +67,6 @@ header {
 	font-size: 50px;
 	height: 75px;
 }
-/*!***************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/body.css ***!
-  \***************************************************************************************************/
-body {
-  background: #F2F2F2;
-  margin: 0px;
-}
-
-.button {
-  padding: 15px 25px;
-  font-size: 24px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #f2f2f2;
-  background-color: #6A44F2;
-  border: none;
-  border-radius: 100px;
-  box-shadow: 0 9px #999;
-}
-
-.button:hover {background-color: #7559D9}
-
-.button:active {
-  background-color: #7E5EF2;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
 
 /* Navigation */
 
@@ -135,8 +107,36 @@ body {
   background-color: #6A44F2;
   color: #f2f2f2;
   padding: 10px 15px;
-  position: absolute;
+}
+
+/*!***************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/body.css ***!
+  \***************************************************************************************************/
+body {
+  background: #F2F2F2;
+  margin: 0px;
+}
+
+.button {
+  margin: 15px 15px;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
   outline: none;
+  color: #f2f2f2;
+  background-color: #6A44F2;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #7559D9}
+
+.button:active {
+  background-color: #7E5EF2;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 /* Liquid Elements */
