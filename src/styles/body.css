@@ -3,12 +3,28 @@ body {
   margin: 0px;
 }
 
-/* Navigation */
-
-#main {
-  transition: margin-left .5s; 
-  padding: 100px;
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #f2f2f2;
+  background-color: #6A44F2;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0 9px #999;
 }
+
+.button:hover {background-color: #7559D9}
+
+.button:active {
+  background-color: #7E5EF2;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Navigation */
 
 .sidepanel {
   height: 100%;
@@ -40,7 +56,6 @@ body {
 }
 
 .openbtn {
-  position: absolute;
   top: 0;
   left: 0;
   font-size: 20px;
@@ -48,7 +63,7 @@ body {
   background-color: #6A44F2;
   color: #f2f2f2;
   padding: 10px 15px;
-  border: none;
+  border-radius: 49%;
 }
 
 /* Liquid Elements */

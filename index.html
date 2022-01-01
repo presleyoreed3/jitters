@@ -13,51 +13,54 @@
 <body>
     <span>
         <header>
-            <div id="side-panel" class="sidepanel">
-                <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">About Jitters</a>
-                <a href="#">Daily Dose</a>
-                <a href="#">Data Set</a>
-                <a href="#">Contact Developer</a>
-            </div>
-            <button class="openbtn" onclick="openNav()">&#9776;</button> 
-            <script>
-                function openNav() { document.getElementById("side-panel").style.width = "250px";}
-                /* Set the width of the sidebar to 0 (hide it) */
-                function closeNav() {document.getElementById("side-panel").style.width = "0";}
-            </script>
-
             <h1 class="title">Jitters</h1>
             <!-- <a href="https://github.com/presleyoreed3">Github</a> -->
         </header>
     </span>
 
-    <body>
-        
-        <button class="raise-level" onclick="raise()">Raise liquid</button>
-        <script>
-            function raise() { 
-                let waves = document.getElementsByClassName("waves")[0];
-                console.log(waves.height);
-                waves.style.height = "100%"
-                waves.style.maxHeight = "100%"
-            }
-        </script>
-        <div>
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    <div id="side-panel" class="sidepanel">
+        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About Jitters</a>
+        <a href="#">Daily Dose</a>
+        <a href="#">Data Set</a>
+        <a href="#">Contact Developer</a>
+    </div>
+            
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button> 
+
+    <script>
+        function openNav() { document.getElementById("side-panel").style.width = "250px";}
+        /* Set the width of the sidebar to 0 (hide it) */
+        function closeNav() {document.getElementById("side-panel").style.width = "0";}
+    </script>
+    </div>      
+    
+
+    <button class="button" onclick="raise()">+</button>
+    <script>
+        function raise() { 
+            let waves = document.getElementsByClassName("waves")[0];
+            waves.style.height = "100%"
+            waves.style.maxHeight = "100%"
+        }
+    </script>
+
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-            <defs>
-                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18    58 18 88 18 v44h-352z" />
-            </defs>
-            <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(106,68,242,0.7)" />
-                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(106,68,242,0.5)" />
-                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(106,68,242,0.3)" />
-                <use xlink:href="#gentle-wave" x="48" y="7" fill="#6A44F2" />
-            </g>
-            </svg>
-        </div>
-    </body>
+        <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18    58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(106,68,242,0.7)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(106,68,242,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(106,68,242,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#6A44F2" />
+        </g>
+        </svg>
+    </div>    
+
 </body>
 
 </html>
