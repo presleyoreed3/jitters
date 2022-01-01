@@ -7,36 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
+    <script src="./src/scripts/modal.js"></script>
     <title>Jitters</title>
 </head>
 
 <body>
     <span>
         <header>
+            <div id="side-panel" class="sidepanel">
+                <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About Jitters</a>
+                <a href="#">Daily Dose</a>
+                <a href="#">Data Set</a>
+                <a href="#">Contact Developer</a>
+            </div>
+            
+            <div id="main">
+                <button class="openbtn" onclick="openNav()">&#9776;</button> 
+                <script>
+                    function openNav() { document.getElementById("side-panel").style.width = "250px";}
+                    /* Set the width of the sidebar to 0 (hide it) */
+                    function closeNav() {document.getElementById("side-panel").style.width = "0";}
+                </script>
+            </div>
             <h1 class="title">Jitters</h1>
-            <!-- <a href="https://github.com/presleyoreed3">Github</a> -->
         </header>
     </span>
 
-    <div id="side-panel" class="sidepanel">
-        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About Jitters</a>
-        <a href="#">Daily Dose</a>
-        <a href="#">Data Set</a>
-        <a href="#">Contact Developer</a>
-    </div>
-            
-    <div id="main">
-        <button class="openbtn" onclick="openNav()">&#9776;</button> 
-    <script>
-        function openNav() { document.getElementById("side-panel").style.width = "250px";}
-        /* Set the width of the sidebar to 0 (hide it) */
-        function closeNav() {document.getElementById("side-panel").style.width = "0";}
-    </script>
-    </div>      
-    
+        
 
-    <button class="button" onclick="raise()">+</button>
+    <script src="./src/index.js"></script>
+
+    <button class="button" id="addDrinkModalBtn" onclick="raise()">&plus;</button>
     <script>
         function raise() { 
             let waves = document.getElementsByClassName("waves")[0];
@@ -44,11 +46,8 @@
             waves.style.maxHeight = "100%"
         }
     </script>
-
-    <h2>Modal Example</h2>
-
     <!-- Trigger/Open The Modal -->
-    <button id="addDrinkModalBtn">Open Modal</button>
+    <!-- <button id="addDrinkModalBtn">Open Modal</button> -->
 
     <!-- The Modal -->
     <div id="addDrinkModal" class="modal">
@@ -75,6 +74,7 @@
         // When the user clicks the button, open the modal 
         btn.onclick = function() {
           modal.style.display = "block";
+          raise();
         }
         
         // When the user clicks on <span> (x), close the modal
