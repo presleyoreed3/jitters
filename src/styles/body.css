@@ -80,6 +80,7 @@ body {
   height: 15vh;
   min-height: 50px;
   max-height: 100px;
+  transition: 1.0s;
 }
 
 .content {
