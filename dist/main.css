@@ -208,6 +208,10 @@ body {
   background-color: rgba(0,0,0,0.4); 
 }
 
+h1{
+  font-size: 60px;
+}
+
 /* Modal Content */
 .modal-content {
   background-color: #C1B3F2;
@@ -216,7 +220,7 @@ body {
   border: 1px solid #888;
   width: 80%;
   text-align: center;
-  font-size: 60px;
+  font-size: 30px;
   border-radius: 30px;
   color: #f2f2f2;
 }
@@ -234,6 +238,12 @@ body {
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
+}
+/*!****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/_form.css ***!
+  \****************************************************************************************************/
+label {
+	margin: 30px;
 }
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!

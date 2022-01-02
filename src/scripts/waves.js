@@ -7,6 +7,4 @@ class Wave {
     }
 }
 
-
-
 module.exports = Wave;

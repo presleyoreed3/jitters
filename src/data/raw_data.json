@@ -1,6 +1,6 @@
 {
-   "Coffee": {
-      "Drip Coffe": {
+   "coffee": {
+      "Drip Coffee": {
          "Size": 8,
          "Mg": 145,
          "MgPerOz.": 20.4
@@ -21,7 +21,7 @@
          "MgPerOz.": 19
       }
    }, 
-   "Tea":{
+   "tea":{
       "Green Tea": {
          "Size": 8,
          "Mg": 25,
@@ -48,7 +48,7 @@
          "MgPerOz.": 6.2
       } 
    },
-   "Soda":{
+   "soda":{
       "Coca-Cola": {
          "Size": 12,
          "Mg": 34,
@@ -70,7 +70,7 @@
          "MgPerOz.": 1.8
       }
    },
-   "Energy Drink":{
+   "energy drink":{
       "Monster": {
          "Size": 16,
          "Mg": 160,
