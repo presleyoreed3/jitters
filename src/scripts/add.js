@@ -37,31 +37,75 @@ function makeOptionsField(type){
 
 	//Clears elements if one is already selected
 	if (document.querySelector("#drink-options")){
-		let clear = document.querySelector("#drink-options")
-		form.removeChild(clear);
-		let dropdown = document.querySelector("#drinks-selector");
-		form.removeChild(dropdown);
-		var lineBreak = document.querySelector("#options-break");
-		form.removeChild(lineBreak);
-	}
+		// let clear = document.querySelector("#drink-options")
+		// form.removeChild(clear);
+		// let dropdown = document.querySelector("#drinks-selector");
+		// form.removeChild(dropdown);
+		// var lineBreak = document.querySelector("#options-break");
+		// form.removeChild(lineBreak);
+		updateOptionsField(type);
+	} else {
 	
-	// Label for the next line of the form
-	let drinkLabel = document.createElement("label")
-	drinkLabel.id = "drink-options"
-	drinkLabel.innerHTML = "Drink: "
-	form.appendChild(drinkLabel);
+		// Label for the next line of the form
+		let drinkLabel = document.createElement("label")
+		drinkLabel.id = "drink-options"
+		drinkLabel.innerHTML = "Drink: "
+		form.appendChild(drinkLabel);
+	
+		// Fills in drink options
+		let option = document.createElement("select");
+		option.classList.add("selection");
+		option.id = "drinks-selector";
+		let types = Object.values(data);
+		let options;
+		if (type === "Coffee"){
+			options = types[0];
+		} else if (type === "Tea"){
+			options = types[1];
+		} else if (type === "Soda"){
+			options = types[2];
+		} else {
+			options = types[3];
+		}
+	
+		// Populates the list of drinks
+		defaultValue.innerHTML = "Select Drink";
+		defaultValue.selected = true;
+		defaultValue.disabled = true;
+		option.appendChild(defaultValue);
+		Object.keys(options).forEach(el => {
+			let typeField = document.createElement("option");
+			typeField.id = "drink-option"
+			typeField.innerHTML = el;
+			option.appendChild(typeField);
+		});
+		
+		// Adds drinks to form with line breaks;
+		form.appendChild(option)
+		var lineBreak = document.createElement("br")
+		lineBreak.id = "options-break"
+		form.appendChild(lineBreak);
+	
+		// Passes the drink name along to generate the slider
+		let typeListener = option.addEventListener("change", (event)=> {
+			let typeValue = event.target.value;
+			makeDrinkSlider(typeValue, options);
+		})
+	}
+}
 
+function updateOptionsField(type){
 	// Fills in drink options
 	let option = document.createElement("select");
 	option.classList.add("selection");
 	option.id = "drinks-selector";
 	let types = Object.values(data);
 	let options;
-	if (type === "coffee"){
+	if (type === "Coffee"){
 		options = types[0];
-	} else if (type === "tea"){
+	} else if (type === "Tea"){
 		options = types[1];
-	} else if (type === "soda"){
+	} else if (type === "Soda"){
 		options = types[2];
 	} else {
 		options = types[3];
@@ -78,18 +122,8 @@ function makeOptionsField(type){
 		typeField.innerHTML = el;
 		option.appendChild(typeField);
 	});
-	
-	// Adds drinks to form with line breaks;
-	form.appendChild(option)
-	var lineBreak = document.createElement("br")
-	lineBreak.id = "options-break"
-	form.appendChild(lineBreak);
-
-	// Passes the drink name along to generate the slider
-	let typeListener = option.addEventListener("change", (event)=> {
-		let typeValue = event.target.value;
-		makeDrinkSlider(typeValue, options);
-	})
+	let oldOption = document.querySelector("#drinks-selector");
+	form.replaceChild(option, oldOption);
 }
 
 function makeDrinkSlider(drink, category){
@@ -135,7 +169,7 @@ function addSubmit(drink, ozs){
 	submitButton.type = "submit";
 	form.appendChild(submitButton);
 
-	// Intercepts the HTTP request to raise level and do math
+	// Intercepts the HTTP request and will do the math
 	let submitClick = submitButton.addEventListener("click", (event) => {
 		event.preventDefault();
 		// Add in the growth of the wave here once I get it from the session token
@@ -143,5 +177,11 @@ function addSubmit(drink, ozs){
 
 }
 
+function deleteForm(){
+	let closeButton = document.querySelector("#closeAddModal");
+	closeButton.addEventListener("click", (event) => {
+
+	})
+}
 
 module.exports = Form;
