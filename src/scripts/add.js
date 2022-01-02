@@ -99,11 +99,28 @@ function makeDrinkSlider(drink, category){
 	slideValues.type = "range";
 	slideValues.min = "1";
 	slideValues.max = "64";
+	slideValues.value = "16";
 	ozSlider.appendChild(slideValues);
 
-	// let ozLabel = document.createElement()
-
+	//Makes the label to display current slider value in oz
+	let ozLabel = document.createElement("p");
+	ozLabel.id = "oz-label";
+	ozLabel.innerHTML = `${slideValues.value} Oz.`;
+	let finalValue = slideValues.value
+	slideValues.oninput = function() {
+		ozLabel.innerHTML = `${this.value} Oz.`;
+		finalValue = slideValues.value
+	}
+	ozSlider.appendChild(ozLabel);
 	form.appendChild(ozSlider);
+
+	addSubmit(drink, finalValue);
+
+}
+
+function addSubmit(drink, ozs){
+
+
 }
 
 
