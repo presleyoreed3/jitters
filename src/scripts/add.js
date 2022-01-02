@@ -11,9 +11,14 @@ form.appendChild(label);
 
 let type = document.createElement("select");
 type.classList.add("type-options")
+let defaultValue = document.createElement("option");
+defaultValue.innerHTML = "Select Category";
+defaultValue.selected = true;
+defaultValue.disabled = true;
+type.appendChild(defaultValue);
 Object.entries(data).forEach(arr => {
 	let typeField = document.createElement("option");
-	typeField.innerHTML = arr[0];
+	typeField.innerHTML = arr[0].slice(0,1).toUpperCase() + arr[0].slice(1);
 	type.appendChild(typeField);
 })
 
@@ -63,6 +68,10 @@ function makeOptionsField(type){
 	}
 
 	// Populates the list of drinks
+	defaultValue.innerHTML = "Select Drink";
+	defaultValue.selected = true;
+	defaultValue.disabled = true;
+	option.appendChild(defaultValue);
 	Object.keys(options).forEach(el => {
 		let typeField = document.createElement("option");
 		typeField.id = "drink-option"
@@ -120,6 +129,17 @@ function makeDrinkSlider(drink, category){
 
 function addSubmit(drink, ozs){
 
+	// Adds the submit button to the base of the form
+	let submitButton = document.createElement("input");
+	submitButton.value = "Add to your Jitters";
+	submitButton.type = "submit";
+	form.appendChild(submitButton);
+
+	// Intercepts the HTTP request to raise level and do math
+	let submitClick = submitButton.addEventListener("click", (event) => {
+		event.preventDefault();
+		// Add in the growth of the wave here once I get it from the session token
+	})
 
 }
 
