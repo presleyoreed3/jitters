@@ -85,18 +85,25 @@ function makeOptionsField(type){
 
 function makeDrinkSlider(drink, category){
 
-	console.log(category);
-
-	// //Makes the slider to select oz
-	// let ozSlider = document.createElement("div")
-	// ozSlider.classList.add("slidecontainer");
-	// let slideValues = document.createElement("input")
-	// slideValues.classList.add("slider")
-	// slideValues.id = "ozRange";
-	// slideValues.type = "range";
-	// slideValues.min = "1";
-	// slideValues.max = "64";
+	//Makes the slider to select oz
+	let ozSlider = document.createElement("div")
+	ozSlider.classList.add("slidecontainer");
+	let sliderLabel = document.createElement("label");
+	sliderLabel.innerHTML = "How many Oz did you have?";
+	ozSlider.appendChild(sliderLabel);
 	
+	// Makes the slider to determine oz
+	let slideValues = document.createElement("input");
+	slideValues.classList.add("slider");
+	slideValues.id = "ozRange";
+	slideValues.type = "range";
+	slideValues.min = "1";
+	slideValues.max = "64";
+	ozSlider.appendChild(slideValues);
+
+	// let ozLabel = document.createElement()
+
+	form.appendChild(ozSlider);
 }
 
 
