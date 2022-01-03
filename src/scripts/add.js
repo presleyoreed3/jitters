@@ -12,10 +12,12 @@ form.appendChild(label);
 let type = document.createElement("select");
 type.classList.add("type-options")
 let defaultValue = document.createElement("option");
+// Adds a default value to the top of list
 defaultValue.innerHTML = "Select Category";
 defaultValue.selected = true;
 defaultValue.disabled = true;
 type.appendChild(defaultValue);
+// Adds the category to the list
 Object.entries(data).forEach(arr => {
 	let typeField = document.createElement("option");
 	typeField.innerHTML = arr[0].slice(0,1).toUpperCase() + arr[0].slice(1);
@@ -94,6 +96,7 @@ function makeOptionsField(type){
 	}
 }
 
+// Function to update the drink option if the category changes
 function updateOptionsField(type){
 	// Fills in drink options
 	let option = document.createElement("select");
@@ -111,7 +114,7 @@ function updateOptionsField(type){
 		options = types[3];
 	}
 
-	// Populates the list of drinks
+	// Populates the list of drinks with default and drinks
 	defaultValue.innerHTML = "Select Drink";
 	defaultValue.selected = true;
 	defaultValue.disabled = true;
@@ -177,6 +180,7 @@ function addSubmit(drink, ozs){
 
 }
 
+// Function to clear form when the close button is pressed on the modal
 function deleteForm(){
 	let closeButton = document.querySelector("#closeAddModal");
 	closeButton.addEventListener("click", (event) => {

@@ -117,7 +117,8 @@ body {
   margin: 0px;
 }
 
-.button {
+/* Button for adding a drink */
+#addDrinkModalBtn {
   margin: 15px 15px;
   padding: 15px 25px;
   font-size: 24px;
@@ -131,9 +132,32 @@ body {
   box-shadow: 0 9px #999;
 }
 
-.button:hover {background-color: #7559D9}
+#addDrinkModalBtn:hover {background-color: #7559D9}
 
-.button:active {
+#addDrinkModalBtn:active {
+  background-color: #7E5EF2;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Button for making your daily goal */
+#logonBtn {
+  margin: 15px 15px;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #f2f2f2;
+  background-color: #6A44F2;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 9px #999;
+}
+
+#logonBtn:hover {background-color: #7559D9}
+
+#logonBtn:active {
   background-color: #7E5EF2;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
