@@ -1,6 +1,8 @@
 .mgMax {
-	position: fixed;
-	margin: 0px 0px 20px 0px;
+	display: flex;
+	justify-content: center;
+	color: #6A44F2;
+	font-size: 30px;
 }
 
 

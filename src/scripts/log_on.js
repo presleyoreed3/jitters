@@ -61,19 +61,19 @@ function dailyMax(){
 function setLine(maxValue){
 
 	let valueLabel = document.createElement("h4")
-	valueLabel.innerHTML = maxValue;
+	valueLabel.innerHTML = `Your Daily Max: ${maxValue}Mg`;
 	valueLabel.classList.add("mgMax")
 	let line = document.createElement("hr");
 	line.id = "line"
 	let location = document.querySelector("#limit-line");
-	location.appendChild(valueLabel);
 	location.appendChild(line);
+	location.appendChild(valueLabel);
 
 }
 
 function updateLine(newMax){
 	let oldLabel = document.getElementsByClassName("mgMax")[0];
-	oldLabel.innerHTML = newMax;
+	oldLabel.innerHTML = `Your Daily Max: ${newMax}Mg`;
 	let location = document.querySelector("#limit-line");
 	location.appendChild(oldLabel);
 
