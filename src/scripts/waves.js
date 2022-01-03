@@ -1,9 +1,13 @@
 class Wave {
 
-    raise() { 
+    raise(percentage) { 
         let waves = document.getElementsByClassName("waves")[0];
-        waves.style.height = "100%"
-        waves.style.maxHeight = "100%"
+        waves.style.height = `${percentage}%`
+        waves.style.maxHeight = `${percentage}%`
+    }
+
+    raiseTo(){
+
     }
 }
 

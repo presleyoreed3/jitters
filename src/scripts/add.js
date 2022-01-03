@@ -1,4 +1,4 @@
-
+const Wave = require("./waves.js")
 const data = require('../data/raw_data.json');
 
 let form = document.getElementsByClassName("input-form")[0];
@@ -11,11 +11,13 @@ form.appendChild(label);
 let type = document.createElement("select");
 type.classList.add("type-options")
 let defaultValue = document.createElement("option");
+
 // Adds a default value to the top of list
 defaultValue.innerHTML = "Select Category";
 defaultValue.selected = true;
 defaultValue.disabled = true;
 type.appendChild(defaultValue);
+
 // Adds the category to the list
 Object.entries(data).forEach(arr => {
 	let typeField = document.createElement("option");
@@ -128,7 +130,7 @@ function makeDrinkSlider(drink, category){
 	let ozSlider = document.createElement("div")
 	ozSlider.classList.add("slidecontainer");
 	let sliderLabel = document.createElement("label");
-	sliderLabel.innerHTML = "How many Oz did you have?";
+	sliderLabel.innerHTML = "How many Oz. did you have?";
 	ozSlider.appendChild(sliderLabel);
 	
 	// Makes the slider to determine oz
@@ -153,11 +155,11 @@ function makeDrinkSlider(drink, category){
 	ozSlider.appendChild(ozLabel);
 	form.appendChild(ozSlider);
 
-	addSubmit(drink, finalValue);
+	addSubmit(drink, finalValue, category);
 
 }
 
-function addSubmit(drink, ozs){
+function addSubmit(drink, ozs, category){
 
 	// Adds the submit button to the base of the form
 	let submitButton = document.createElement("input");
@@ -168,7 +170,23 @@ function addSubmit(drink, ozs){
 	// Intercepts the HTTP request and will do the math
 	let submitClick = submitButton.addEventListener("click", (event) => {
 		event.preventDefault();
-		// Add in the growth of the wave here once I get it from the set max
+		let setLimit = document.getElementsByClassName("mgMax")[0];
+		let limitMg = setLimit.dataset.mgValue;
+		let mgPerOz;
+
+		for (const drinkData in category) {
+			mgPerOz = category[drinkData].mgPerOz;
+		}
+		console.log(mgPerOz);
+		console.log(ozs);
+		let finalMgCount = ozs * mgPerOz;
+		let waveRaiseAmount = (finalMgCount/limitMg);
+		let percentage = Math.floor(waveRaiseAmount * .75 * 100);
+		console.log(finalMgCount);
+		console.log(limitMg);
+		console.log(percentage);
+		let wave = new Wave();
+		wave.raise(percentage);
 	})
 
 }

@@ -3,103 +3,103 @@
       "Drip Coffee": {
          "Size": 8,
          "Mg": 145,
-         "MgPerOz.": 20.4
+         "mgPerOz": 20.4
       },
       "Cold Brew": {
          "Size": 10,
          "Mg": 60,
-         "MgPerOz.": 6
+         "mgPerOz": 6
       },
       "French Press": {
          "Size": 8,
          "Mg": 107,
-         "MgPerOz.": 14
+         "mgPerOz": 14
       },
       "Espresso": {
          "Size": 1.5,
          "Mg": 77,
-         "MgPerOz.": 19
+         "mgPerOz": 19
       }
    }, 
    "tea":{
       "Green Tea": {
          "Size": 8,
          "Mg": 25,
-         "MgPerOz.": 3.1
+         "mgPerOz": 3.1
       },
       "Black Tea": {
          "Size": 8,
          "Mg": 30,
-         "MgPerOz.": 3.8
+         "mgPerOz": 3.8
       },
       "Matcha": {
          "Size": 8,
          "Mg": 64,
-         "MgPerOz.": 8
+         "mgPerOz": 8
       },
       "Yerba Mate": {
          "Size": 16,
          "Mg": 150,
-         "MgPerOz.": 9.7
+         "mgPerOz": 9.7
       },
       "Chai": {
          "Size": 8,
          "Mg": 50,
-         "MgPerOz.": 6.2
+         "mgPerOz": 6.2
       } 
    },
    "soda":{
       "Coca-Cola": {
          "Size": 12,
          "Mg": 34,
-         "MgPerOz.": 2.8
+         "mgPerOz": 2.8
       },
       "Dr. Pepper": {
          "Size": 12,
          "Mg": 42,
-         "MgPerOz.": 3.5
+         "mgPerOz": 3.5
       },
       "Mountain Dew": {
          "Size": 12,
          "Mg": 54,
-         "MgPerOz.": 4.5
+         "mgPerOz": 4.5
       },
       "Root Beer": {
          "Size": 12,
          "Mg": 22,
-         "MgPerOz.": 1.8
+         "mgPerOz": 1.8
       }
    },
    "energy drink":{
       "Monster": {
          "Size": 16,
          "Mg": 160,
-         "MgPerOz.": 10
+         "mgPerOz": 10
       },
       "Red Bull": {
          "Size": 8.5,
          "Mg": 80,
-         "MgPerOz.": 9.5
+         "mgPerOz": 9.5
       },
       "Rockstar": {
          "Size": 16,
          "Mg": 160,
-         "MgPerOz.": 10
+         "mgPerOz": 10
       },
       "5-Hour-Energy": {
          "Size": 1.9,
          "Mg": 200,
-         "MgPerOz.": 103.6
+         "mgPerOz": 103.6
       },
       "NOS": {
          "Size": 16,
          "Mg": 160,
-         "MgPerOz.": 10
+         "mgPerOz": 10
       },
       "Bang": {
          "Size": 16,
          "Mg": 300,
-         "MgPerOz.": 18.8
+         "mgPerOz": 18.8
       }
    }
 }

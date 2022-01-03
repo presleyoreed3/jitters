@@ -63,6 +63,7 @@ function setLine(maxValue){
 	let valueLabel = document.createElement("h4")
 	valueLabel.innerHTML = `Your Daily Max: ${maxValue}Mg`;
 	valueLabel.classList.add("mgMax")
+	valueLabel.dataset.mgValue = maxValue
 	let line = document.createElement("hr");
 	line.id = "line"
 	let location = document.querySelector("#limit-line");
@@ -75,6 +76,7 @@ function updateLine(newMax){
 	let oldLabel = document.getElementsByClassName("mgMax")[0];
 	oldLabel.innerHTML = `Your Daily Max: ${newMax}Mg`;
 	let location = document.querySelector("#limit-line");
+	oldLabel.dataset.mgValue = newMax;
 	location.appendChild(oldLabel);
 
 }
