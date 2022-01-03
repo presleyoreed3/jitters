@@ -1,0 +1,12 @@
+.mgMax {
+	position: fixed;
+	margin: 0px 0px 20px 0px;
+}
+
+
+hr {
+	background-color: #6A44F2;
+	height: 5px;
+	margin-top: 10%;
+	z-index: -1;
+}

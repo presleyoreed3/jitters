@@ -186,5 +186,3 @@ function deleteForm(){
 
 	})
 }
-
-module.exports = Form;
