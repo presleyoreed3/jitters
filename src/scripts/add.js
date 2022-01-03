@@ -38,12 +38,6 @@ function makeOptionsField(type){
 
 	//Clears elements if one is already selected
 	if (document.querySelector("#drink-options")){
-		// let clear = document.querySelector("#drink-options")
-		// form.removeChild(clear);
-		// let dropdown = document.querySelector("#drinks-selector");
-		// form.removeChild(dropdown);
-		// var lineBreak = document.querySelector("#options-break");
-		// form.removeChild(lineBreak);
 		updateOptionsField(type);
 	} else {
 	
