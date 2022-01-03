@@ -41,7 +41,6 @@ let limitButton = document.getElementById("logonBtn");
 
 // Get the <span> element that closes the limitModal
 let nextSpan = document.getElementById("closeLoginModal");
-console.log(nextSpan)
 
 // When the user clicks the button, open the limitModal 
 limitButton.onclick = function() {

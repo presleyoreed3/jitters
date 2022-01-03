@@ -3,7 +3,6 @@ const data = require('../data/raw_data.json');
 
 let form = document.getElementsByClassName("input-form")[0];
 
-
 // Makes the Type for the form
 let label = document.createElement("label")
 label.innerHTML = "Drink Type: "
