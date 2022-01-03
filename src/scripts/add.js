@@ -168,7 +168,7 @@ function addSubmit(drink, ozs){
 	// Intercepts the HTTP request and will do the math
 	let submitClick = submitButton.addEventListener("click", (event) => {
 		event.preventDefault();
-		// Add in the growth of the wave here once I get it from the session token
+		// Add in the growth of the wave here once I get it from the set max
 	})
 
 }

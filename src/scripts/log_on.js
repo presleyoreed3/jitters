@@ -40,7 +40,20 @@ function dailyMax(){
 	setLimit.type = "submit";
 	form.appendChild(setLimit);
 
-	setLine(finalValue);
+	// Draws the line with specified limit on click
+	let drawLine = setLimit.addEventListener("click", (event) => {
+		// Checks to see if line is already drawn
+		let existingLine = document.querySelector("#line");
+		if (existingLine){
+			updateLine(finalValue);
+		} else {
+			setLine(finalValue);
+		}
+		let limitModal = document.getElementById("logonModal");
+		let nextSpan = document.getElementById("closeLoginModal");
+		limitModal.style.display = "none";
+	})
+	
 	return finalValue;
 
 }
@@ -51,8 +64,17 @@ function setLine(maxValue){
 	valueLabel.innerHTML = maxValue;
 	valueLabel.classList.add("mgMax")
 	let line = document.createElement("hr");
+	line.id = "line"
 	let location = document.querySelector("#limit-line");
 	location.appendChild(valueLabel);
 	location.appendChild(line);
+
+}
+
+function updateLine(newMax){
+	let oldLabel = document.getElementsByClassName("mgMax")[0];
+	oldLabel.innerHTML = newMax;
+	let location = document.querySelector("#limit-line");
+	location.appendChild(oldLabel);
 
 }

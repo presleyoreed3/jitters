@@ -33,7 +33,6 @@ window.onclick = function(event) {
 }
 
 // For Limit modal
-
 // Get the modal
 let limitModal = document.getElementById("logonModal");
 // Get the button that opens the limitModal
@@ -45,9 +44,6 @@ let nextSpan = document.getElementById("closeLoginModal");
 // When the user clicks the button, open the limitModal 
 limitButton.onclick = function() {
   limitModal.style.display = "block";
-  // Test function to make sure the water level rises.
-  // let wave = new Wave();
-  // wave.raise();
 }
 
 // When the user clicks on <nextSpan> (x), close the limitModal
