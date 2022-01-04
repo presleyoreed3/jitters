@@ -329,6 +329,7 @@ div#limit-line {
 	position: absolute;
 	top: 25%;
 	width: 100%;
+	border: none;
 }
 
 
