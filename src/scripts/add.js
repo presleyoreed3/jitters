@@ -138,6 +138,7 @@ function updateOptionsField(type){
 	form.replaceChild(option, oldOption);
 }
 
+// Adds the slider to the form for selecting ozs
 function makeDrinkSlider(drink, category){
 
 	//Makes the slider to select oz
@@ -173,6 +174,7 @@ function makeDrinkSlider(drink, category){
 
 }
 
+// Button that does the math and raises the wave
 function addSubmit(drink, ozs, category){
 
 	// Adds the submit button to the base of the form
@@ -210,6 +212,7 @@ function addSubmit(drink, ozs, category){
 
 }
 
+// Function that clears the form
 function clearSubmittion(){
 	let node = document.getElementsByClassName("input-form")[0];
 	node.querySelectorAll('*').forEach(el => {
@@ -217,7 +220,7 @@ function clearSubmittion(){
 	});
 }
 
-// Function to clear form when the close button is pressed on the modal
+// listener on the close button to clear the form
 let closeButton = document.querySelector("#closeAddModal");
 closeButton.addEventListener("click", (event) => {
 	clearSubmittion();
