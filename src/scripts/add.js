@@ -8,6 +8,16 @@ let knowToStart = startButton.addEventListener("click", (event) => {
 	startForm();
 })
 
+// Checks to make sure a limit is set before adding a drink
+function checkLimit(){
+	var finalMgCount;
+	let waveElement = document.querySelector("#wave-div");
+	finalMgCount = waveElement.dataset.currentMg;
+	if (!finalMgCount){
+		alert("You must set a daily limit before adding a drink!");
+	}
+}
+
 function startForm(){
 
 	// Makes the Type for the form
@@ -186,7 +196,14 @@ function addSubmit(drink, ozs, category){
 	// Intercepts the HTTP request and will do the math
 	let submitClick = submitButton.addEventListener("click", (event) => {
 		event.preventDefault();
+
 		let setLimit = document.getElementsByClassName("mgMax")[0];
+		if (!setLimit){
+			checkLimit();
+			modal = document.getElementById("addDrinkModal");
+			modal.style.display = "none";
+			clearSubmittion();
+		}
 		let limitMg = setLimit.dataset.mgValue;
 		let mgPerOz;
 
@@ -200,10 +217,9 @@ function addSubmit(drink, ozs, category){
 		let waveRaiseAmount = (finalMgCount/limitMg);
 		let percentage = Math.floor(waveRaiseAmount * .75 * 100);
 		let waveElement = document.querySelector("#wave-div");
-		waveElement.dataset.currentMg = finalMgCount;
+		finalMgCount = waveElement.dataset.currentMg;
 
 		// Makes wave to raise;
-		console.log("I submitted a wave")
 		wave.raise(percentage);
 		let modal = document.getElementById("addDrinkModal");
 		modal.style.display = "none";
