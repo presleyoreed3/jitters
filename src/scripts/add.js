@@ -203,16 +203,23 @@ function addSubmit(drink, ozs, category){
 		// Makes wave to raise;
 		console.log("I submitted a wave")
 		wave.raise(percentage);
+		let modal = document.getElementById("addDrinkModal");
+		modal.style.display = "none";
+		clearSubmittion();
 	})
 
+}
+
+function clearSubmittion(){
+	let node = document.getElementsByClassName("input-form")[0];
+	node.querySelectorAll('*').forEach(el => {
+		el.remove();
+	});
 }
 
 // Function to clear form when the close button is pressed on the modal
 let closeButton = document.querySelector("#closeAddModal");
 closeButton.addEventListener("click", (event) => {
-	let node = document.getElementsByClassName("input-form")[0];
-	node.querySelectorAll('*').forEach(el => {
-		el.remove();
-	});
+	clearSubmittion();
 });
 
