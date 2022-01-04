@@ -2,44 +2,55 @@ const Wave = require("./waves.js")
 const data = require('../data/raw_data.json');
 
 let form = document.getElementsByClassName("input-form")[0];
-
-// Makes the Type for the form
-let label = document.createElement("label")
-label.innerHTML = "Drink Type: "
-form.appendChild(label);
-
-let type = document.createElement("select");
-type.classList.add("type-options")
+let startButton = document.getElementById("addDrinkModalBtn");
 let defaultValue = document.createElement("option");
-
-// Adds a default value to the top of list
-defaultValue.innerHTML = "Select Category";
-defaultValue.selected = true;
-defaultValue.disabled = true;
-type.appendChild(defaultValue);
-
-// Adds the category to the list
-Object.entries(data).forEach(arr => {
-	let typeField = document.createElement("option");
-	typeField.innerHTML = arr[0].slice(0,1).toUpperCase() + arr[0].slice(1);
-	type.appendChild(typeField);
+let knowToStart = startButton.addEventListener("click", (event) => {
+	startForm();
 })
 
-form.appendChild(type)
-var lineBreak = document.createElement("br")
-form.appendChild(lineBreak);
+function startForm(){
 
-// Listener for the type of drink
-let typeListener = type.addEventListener("change", (event)=> {
-	let typeValue = event.target.value;
-	makeOptionsField(typeValue);
-})
+	// Makes the Type for the form
+	let label = document.createElement("label")
+	label.innerHTML = "Drink Type: "
+	form.appendChild(label);
+	
+	let type = document.createElement("select");
+	type.classList.add("type-options")
+	
+	
+	// Adds a default value to the top of list
+	defaultValue.innerHTML = "Select Category";
+	defaultValue.selected = true;
+	defaultValue.disabled = true;
+	type.appendChild(defaultValue);
+	
+	// Adds the category to the list
+	Object.entries(data).forEach(arr => {
+		let typeField = document.createElement("option");
+		typeField.innerHTML = arr[0].slice(0,1).toUpperCase() + arr[0].slice(1);
+		type.appendChild(typeField);
+	})
+	
+	form.appendChild(type)
+	var lineBreak = document.createElement("br")
+	form.appendChild(lineBreak);
+	
+	// Listener for the type of drink
+	let typeListener = type.addEventListener("change", (event)=> {
+		let typeValue = event.target.value;
+		makeOptionsField(typeValue);
+	})
+}
+
+
 
 // Function to draw the drink options once type is selected
 function makeOptionsField(type){
 
 	//Clears elements if one is already selected
 	if (document.querySelector("#drink-options")){
+		console.log("Wait waht?")
 		updateOptionsField(type);
 	} else {
 	
@@ -174,17 +185,15 @@ function addSubmit(drink, ozs, category){
 		let limitMg = setLimit.dataset.mgValue;
 		let mgPerOz;
 
+		// Gets the mg/oz of a drink
 		for (const drinkData in category) {
 			mgPerOz = category[drinkData].mgPerOz;
 		}
-		console.log(mgPerOz);
-		console.log(ozs);
+
+		// Does the math and raises the wave by the appropriate amount
 		let finalMgCount = ozs * mgPerOz;
 		let waveRaiseAmount = (finalMgCount/limitMg);
 		let percentage = Math.floor(waveRaiseAmount * .75 * 100);
-		console.log(finalMgCount);
-		console.log(limitMg);
-		console.log(percentage);
 		let wave = new Wave();
 		wave.raise(percentage);
 	})
@@ -192,9 +201,13 @@ function addSubmit(drink, ozs, category){
 }
 
 // Function to clear form when the close button is pressed on the modal
-function deleteForm(){
-	let closeButton = document.querySelector("#closeAddModal");
-	closeButton.addEventListener("click", (event) => {
+let closeButton = document.querySelector("#closeAddModal");
+closeButton.addEventListener("click", (event) => {
+	console.log("You clicked close")
+	let node = document.getElementsByClassName("input-form")[0];
+	console.log(node);
+	node.querySelectorAll('*').forEach(el => {
+		el.remove();
+	});
+});
 
-	})
-}
