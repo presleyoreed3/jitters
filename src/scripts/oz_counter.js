@@ -5,7 +5,6 @@ let submitNewDrink = document.querySelector("#add-drink-button")
 drawCounter();
 
 function drawCounter() {
-	console.log("Building the counter")
 	let amount = 0;
 	let countDisplay = document.createElement("h4");
 	countDisplay.innerHTML = `Current Amount: ${amount}Mg`;

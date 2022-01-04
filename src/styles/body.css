@@ -69,7 +69,7 @@ body {
   min-height: 50px;
   max-height: 100px;
   transition: 1.0s;
-  z-index: 2;
+  z-index: -40;
 }
 
 .content {

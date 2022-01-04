@@ -157,13 +157,18 @@ function updateOptionsField(type){
 // Adds the slider to the form for selecting ozs
 function makeDrinkSlider(drink, category){
 
-	//Makes the slider to select oz
-	let ozSlider = document.createElement("div")
-	if (document.getElementsByClassName("slidecontainer")[0]){
+	let node = document.getElementsByClassName("slidecontainer")[0]
+	if (node){
 		node.querySelectorAll('*').forEach(el => {
 			el.remove();
 		});
+		let button = document.getElementById("add-drink-button");
+		button.remove();
+		node.remove();
 	}
+
+	//Makes the slider to select oz
+	let ozSlider = document.createElement("div")
 	ozSlider.classList.add("slidecontainer");
 	let sliderLabel = document.createElement("label");
 	sliderLabel.innerHTML = "How many Oz. did you have?";
