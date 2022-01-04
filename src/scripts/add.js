@@ -221,10 +221,13 @@ function addSubmit(drink, ozs, category){
 
 		// Gets the mg/oz of a drink
 		for (const drinkData in category) {
-			mgPerOz = category[drinkData].mgPerOz;
+			if (drinkData === drink){
+				mgPerOz = category[drinkData].mgPerOz;
+			}
 		}
 
 		// Does the math and raises the wave by the appropriate amount
+		console.log(`${drink} has ${mgPerOz}`)
 		let finalMgCount = ozs * mgPerOz;
 		let waveRaiseAmount = (finalMgCount/limitMg);
 		let percentage = Math.floor(waveRaiseAmount * .75 * 100);
@@ -233,6 +236,9 @@ function addSubmit(drink, ozs, category){
 		currentCount = parseInt(currentCount);
 		currentCount += finalMgCount;
 		waveElement.dataset.currentMg = currentCount;
+
+		let counter = document.querySelector("#display");
+		counter.innerHTML = `Current Amount: ${currentCount}Mg`;
 
 		// Makes wave to raise;
 		wave.raise(percentage);

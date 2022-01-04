@@ -15,5 +15,5 @@ div#limit-line {
 hr {
 	background-color: #6A44F2;
 	height: 5px;
-	z-index: -1;
+	z-index: 10;
 }

@@ -26,6 +26,7 @@ header {
   overflow-x: hidden;
   transition: 0.7s;
   padding-top: 75px;
+  z-index: 30;
 }
 
 .sidepanel a {
