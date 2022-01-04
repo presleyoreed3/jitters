@@ -5,6 +5,11 @@
 	font-size: 30px;
 }
 
+div #line-limit {
+	position: absolute;
+	top: 25%;
+}
+
 
 hr {
 	background-color: #6A44F2;

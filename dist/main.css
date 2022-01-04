@@ -121,6 +121,7 @@ header {
 body {
   background: #F2F2F2;
   margin: 0px;
+  position: relative;
 }
 
 /* Button for adding a drink */
@@ -320,6 +321,11 @@ label {
 	font-size: 30px;
 }
 
+div #line-limit {
+	position: absolute;
+	top: 25%;
+}
+
 
 hr {
 	background-color: #6A44F2;
@@ -328,6 +334,20 @@ hr {
 	z-index: -1;
 }
 
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/_counter.css ***!
+  \*******************************************************************************************************/
+#current-oz-tracker {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 1;
+}
+
+#current-oz-tracker h4 {
+	font-size: 30px;
+	color: #f2f2f2;
+}
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
   \*****************************************************************************************************************************************/

@@ -202,6 +202,7 @@ function addSubmit(drink, ozs, category){
 	let submitButton = document.createElement("input");
 	submitButton.value = "Add to your Jitters";
 	submitButton.type = "submit";
+	submitButton.id = "add-drink-button"
 	form.appendChild(submitButton);
 
 	// Intercepts the HTTP request and will do the math
@@ -228,7 +229,7 @@ function addSubmit(drink, ozs, category){
 		let waveRaiseAmount = (finalMgCount/limitMg);
 		let percentage = Math.floor(waveRaiseAmount * .75 * 100);
 		let waveElement = document.querySelector("#wave-div");
-		waveElement.dataset.currentMg = finalMgCount;
+		waveElement.dataset.currentMg += finalMgCount;
 
 		// Makes wave to raise;
 		wave.raise(percentage);
