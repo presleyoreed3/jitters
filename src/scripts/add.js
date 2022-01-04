@@ -3,7 +3,7 @@ const data = require('../data/raw_data.json');
 
 let form = document.getElementsByClassName("input-form")[0];
 let startButton = document.getElementById("addDrinkModalBtn");
-let defaultValue = document.createElement("option");
+let wave = new Wave();
 let knowToStart = startButton.addEventListener("click", (event) => {
 	startForm();
 })
@@ -20,6 +20,7 @@ function startForm(){
 	
 	
 	// Adds a default value to the top of list
+	var defaultValue = document.createElement("option");
 	defaultValue.innerHTML = "Select Category";
 	defaultValue.selected = true;
 	defaultValue.disabled = true;
@@ -50,7 +51,7 @@ function makeOptionsField(type){
 
 	//Clears elements if one is already selected
 	if (document.querySelector("#drink-options")){
-		console.log("Wait waht?")
+		console.log("Im updating")
 		updateOptionsField(type);
 	} else {
 	
@@ -77,6 +78,7 @@ function makeOptionsField(type){
 		}
 	
 		// Populates the list of drinks
+		var defaultValue = document.createElement("option");
 		defaultValue.innerHTML = "Select Drink";
 		defaultValue.selected = true;
 		defaultValue.disabled = true;
@@ -121,6 +123,7 @@ function updateOptionsField(type){
 	}
 
 	// Populates the list of drinks with default and drinks
+	var defaultValue = document.createElement("option");
 	defaultValue.innerHTML = "Select Drink";
 	defaultValue.selected = true;
 	defaultValue.disabled = true;
@@ -194,7 +197,11 @@ function addSubmit(drink, ozs, category){
 		let finalMgCount = ozs * mgPerOz;
 		let waveRaiseAmount = (finalMgCount/limitMg);
 		let percentage = Math.floor(waveRaiseAmount * .75 * 100);
-		let wave = new Wave();
+		let waveElement = document.querySelector("#wave-div");
+		waveElement.dataset.currentMg = finalMgCount;
+
+		// Makes wave to raise;
+		console.log("I submitted a wave")
 		wave.raise(percentage);
 	})
 
@@ -203,9 +210,7 @@ function addSubmit(drink, ozs, category){
 // Function to clear form when the close button is pressed on the modal
 let closeButton = document.querySelector("#closeAddModal");
 closeButton.addEventListener("click", (event) => {
-	console.log("You clicked close")
 	let node = document.getElementsByClassName("input-form")[0];
-	console.log(node);
 	node.querySelectorAll('*').forEach(el => {
 		el.remove();
 	});

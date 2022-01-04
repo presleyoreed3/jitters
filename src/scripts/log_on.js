@@ -73,10 +73,12 @@ function setLine(maxValue){
 }
 
 function updateLine(newMax){
+
 	let oldLabel = document.getElementsByClassName("mgMax")[0];
 	oldLabel.innerHTML = `Your Daily Max: ${newMax}Mg`;
 	let location = document.querySelector("#limit-line");
 	oldLabel.dataset.mgValue = newMax;
 	location.appendChild(oldLabel);
 
+	// ***Need to add something to adjust the wave height after the line value is updated.***
 }

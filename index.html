@@ -23,9 +23,15 @@
             <div id="main">
                 <button class="openbtn" onclick="openNav()">&#9776;</button> 
                 <script>
-                    function openNav() { document.getElementById("side-panel").style.width = "250px";}
+                    function openNav() { 
+                        document.getElementById("side-panel").style.width = "250px";
+                        document.getElementsByClassName("openbtn")[0].style.display = "none";
+                    }
                     /* Set the width of the sidebar to 0 (hide it) */
-                    function closeNav() {document.getElementById("side-panel").style.width = "0";}
+                    function closeNav() {
+                        document.getElementById("side-panel").style.width = "0";
+                        document.getElementsByClassName("openbtn")[0].style.display = "block";
+                    }
                 </script>
             </div>
             <h1 class="title">Jitters</h1>
@@ -76,7 +82,7 @@
         
     </div>
 
-    <div>
+    <div id="wave-div">
         <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
         <defs>

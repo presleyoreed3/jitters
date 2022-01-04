@@ -25,6 +25,9 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+button {
+	border: none;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -78,7 +81,7 @@ header {
   left: 0;
   background-color: #6A44F2;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0.7s;
   padding-top: 75px;
 }
 
@@ -100,11 +103,11 @@ header {
 }
 
 .openbtn {
-  display: block;
+  display: flex;
   position: fixed;
   top: 15px;
   left: 15px;
-  font-size: 20px;
+  font-size: 25px;
   cursor: pointer;
   background-color: #6A44F2;
   color: #f2f2f2;
