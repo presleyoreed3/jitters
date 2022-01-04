@@ -146,6 +146,12 @@ function updateOptionsField(type){
 	});
 	let oldOption = document.querySelector("#drinks-selector");
 	form.replaceChild(option, oldOption);
+
+	// Passes the drink name along to generate the slider
+	let typeListener = option.addEventListener("change", (event)=> {
+		let typeValue = event.target.value;
+		makeDrinkSlider(typeValue, options);
+	})
 }
 
 // Adds the slider to the form for selecting ozs
@@ -153,6 +159,11 @@ function makeDrinkSlider(drink, category){
 
 	//Makes the slider to select oz
 	let ozSlider = document.createElement("div")
+	if (document.getElementsByClassName("slidecontainer")[0]){
+		node.querySelectorAll('*').forEach(el => {
+			el.remove();
+		});
+	}
 	ozSlider.classList.add("slidecontainer");
 	let sliderLabel = document.createElement("label");
 	sliderLabel.innerHTML = "How many Oz. did you have?";
@@ -217,7 +228,7 @@ function addSubmit(drink, ozs, category){
 		let waveRaiseAmount = (finalMgCount/limitMg);
 		let percentage = Math.floor(waveRaiseAmount * .75 * 100);
 		let waveElement = document.querySelector("#wave-div");
-		finalMgCount = waveElement.dataset.currentMg;
+		waveElement.dataset.currentMg = finalMgCount;
 
 		// Makes wave to raise;
 		wave.raise(percentage);
