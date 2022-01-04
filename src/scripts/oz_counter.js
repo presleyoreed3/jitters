@@ -3,6 +3,9 @@ let counter = document.querySelector("#current-oz-tracker");
 let waveElement = document.querySelector("#wave-div");
 let submitNewDrink = document.querySelector("#add-drink-button")
 drawCounter();
+let updateMade = submitNewDrink.addEventListener("click", (event) => {
+	updateCounter();
+})
 
 function drawCounter() {
 	let amount = 0;

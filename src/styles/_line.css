@@ -5,15 +5,15 @@
 	font-size: 30px;
 }
 
-div #line-limit {
+div#limit-line {
 	position: absolute;
 	top: 25%;
+	width: 100%;
 }
 
 
 hr {
 	background-color: #6A44F2;
 	height: 5px;
-	margin-top: 10%;
 	z-index: -1;
 }

@@ -18,8 +18,8 @@ function dailyMax(){
 	slideValues.id = "mgRange";
 	slideValues.type = "range";
 	slideValues.min = "20";
-	slideValues.max = "500";
-	slideValues.value = "100";
+	slideValues.max = "700";
+	slideValues.value = "200";
 	mgSlider.appendChild(slideValues);
 
 	//Makes the label to display current slider value in mg
