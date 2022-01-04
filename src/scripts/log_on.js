@@ -80,5 +80,6 @@ function updateLine(newMax){
 	oldLabel.dataset.mgValue = newMax;
 	location.appendChild(oldLabel);
 
-	// ***Need to add something to adjust the wave height after the line value is updated.***
+	let wave = document.getElementById("wave-div");
+	
 }
