@@ -229,7 +229,10 @@ function addSubmit(drink, ozs, category){
 		let waveRaiseAmount = (finalMgCount/limitMg);
 		let percentage = Math.floor(waveRaiseAmount * .75 * 100);
 		let waveElement = document.querySelector("#wave-div");
-		waveElement.dataset.currentMg += finalMgCount;
+		let currentCount = waveElement.dataset.currentMg
+		currentCount = parseInt(currentCount);
+		currentCount += finalMgCount;
+		waveElement.dataset.currentMg = currentCount;
 
 		// Makes wave to raise;
 		wave.raise(percentage);
