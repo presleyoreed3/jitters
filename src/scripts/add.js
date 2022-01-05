@@ -191,18 +191,11 @@ function makeDrinkSlider(drink, category){
 	ozLabel.innerHTML = `${slideValues.value} Oz.`;
 	let finalValue = slideValues.value
 	slideValues.oninput = function() {
+		finalValue = this.value
 		ozLabel.innerHTML = `${this.value} Oz.`;
-		finalValue = slideValues.value
 	}
 	ozSlider.appendChild(ozLabel);
 	form.appendChild(ozSlider);
-
-	addSubmit(drink, finalValue, category);
-
-}
-
-// Button that does the math and raises the wave
-function addSubmit(drink, ozs, category){
 
 	// Adds the submit button to the base of the form
 	let submitButton = document.createElement("input");
@@ -214,50 +207,53 @@ function addSubmit(drink, ozs, category){
 	// Intercepts the HTTP request and will do the math
 	let submitClick = submitButton.addEventListener("click", (event) => {
 		event.preventDefault();
+		addSubmit(drink, finalValue, category);
+	});
+}
 
-		let setLimit = document.getElementsByClassName("mgMax")[0];
-		let limitMg;
-		if (!setLimit){
-			checkLimit();
-			modal = document.getElementById("addDrinkModal");
-			modal.style.display = "none";
-			clearSubmittion();
-			return;
-		} else {
-			limitMg = setLimit.dataset.mgValue;
-		}
-		let mgPerOz;
+// Button that does the math and raises the wave
+function addSubmit(drink, ozs, category){
 
-		// Gets the mg/oz of a drink
-		for (const drinkData in category) {
-			if (drinkData === drink){
-				mgPerOz = category[drinkData].mgPerOz;
-			}
-		}
-
-		// Does the math and raises the wave by the appropriate amount
-		let finalMgCount = ozs * mgPerOz;
-		let waveRaiseAmount = (finalMgCount/limitMg);
-		let percentage = Math.floor(waveRaiseAmount * .75 * 100);
-		let waveElement = document.querySelector("#wave-div");
-		let currentCount = waveElement.dataset.currentMg
-		currentCount = parseInt(currentCount);
-		currentCount += finalMgCount;
-		waveElement.dataset.currentMg = currentCount;
-
-		let counter = document.querySelector("#display");
-		counter.innerHTML = `Current Amount: ${currentCount}Mg`;
-
-		// Makes wave to raise;
-		wave.raise(percentage);
-		let modal = document.getElementById("addDrinkModal");
+	let setLimit = document.getElementsByClassName("mgMax")[0];
+	let limitMg;
+	if (!setLimit){
+		checkLimit();
+		modal = document.getElementById("addDrinkModal");
 		modal.style.display = "none";
 		clearSubmittion();
+		return;
+	} else {
+		limitMg = setLimit.dataset.mgValue;
+	}
+	let mgPerOz;
 
-		// Adds the drink to the drink list
-		drinkList.addDrink(drink, ozs, finalMgCount);
-		drinkList.display();
-	})
+	// Gets the mg/oz of a drink
+	for (const drinkData in category) {
+		if (drinkData === drink){
+			mgPerOz = category[drinkData].mgPerOz;
+		}
+	}
+
+	// Does the math and raises the wave by the appropriate amount
+	let finalMgCount = ozs * mgPerOz;
+	console.log(ozs)
+	let waveRaiseAmount = (finalMgCount/limitMg);
+	let percentage = Math.floor(waveRaiseAmount * .75 * 100);
+	let waveElement = document.querySelector("#wave-div");
+	let currentCount = waveElement.dataset.currentMg
+	currentCount = parseInt(currentCount);
+	currentCount += finalMgCount;
+	waveElement.dataset.currentMg = currentCount;
+	let counter = document.querySelector("#display");
+	counter.innerHTML = `Current Amount: ${currentCount}Mg`;
+	// Makes wave to raise;
+	wave.raise(percentage);
+	let modal = document.getElementById("addDrinkModal");
+	modal.style.display = "none";
+	clearSubmittion();
+	// Adds the drink to the drink list
+	drinkList.addDrink(drink, ozs, finalMgCount);
+	drinkList.display();
 
 }
 
