@@ -267,5 +267,7 @@ function clearSubmittion(){
 let closeButton = document.querySelector("#closeAddModal");
 closeButton.addEventListener("click", (event) => {
 	clearSubmittion();
+	let modal = document.getElementById("addDrinkModal");
+	modal.style.display = "none";
 });
 

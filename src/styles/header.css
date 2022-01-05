@@ -4,7 +4,7 @@ html * {
 
 header {
 	display: flex;
-	justify-content: center;
+  justify-content: space-between;
 	background-color: #6A44F2;
 	background: #6A44F2;
 	color: #F2F2F2;
@@ -12,6 +12,26 @@ header {
 	text-margin: 30px;
 	font-size: 50px;
 	height: 75px;
+}
+
+/* Info */
+.infoBtn {
+  position: relative;
+  font-size: 25px;
+  background-color: #6A44F2;
+  color: #f2f2f2;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.openbtn {
+  position: relative;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #6A44F2;
+  color: #f2f2f2;
+  border-radius: 50%;
+  margin: 5px;
 }
 
 /* Navigation */
@@ -44,17 +64,4 @@ header {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
-}
-
-.openbtn {
-  display: flex;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  font-size: 25px;
-  cursor: pointer;
-  background-color: #6A44F2;
-  color: #f2f2f2;
-  padding: 10px 15px 10px;
-  border-radius: 50%;
 }
