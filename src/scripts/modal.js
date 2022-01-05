@@ -27,7 +27,7 @@ let infoButton = document.getElementById("infoBtn");
 // Get the <span> element that closes the limitModal
 let infoSpan = document.getElementById("closeInfoModal");
 // Displays the limit modal
-display(infoButton, infoModal, infoSpan);
+// display(infoButton, infoModal, infoSpan);
 
 
 function display(btn, modal, span) {

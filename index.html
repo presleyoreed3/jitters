@@ -40,8 +40,31 @@
 
     <script src="./src/index.js"></script>
 
-    <button class="button" id="addDrinkModalBtn">&plus;</button>
+    <!-- Info Modal -->
+    <div id="infoModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="closeInfoModal">&times;</span>
+            <h1>Welcome to Jitters</h1>
+            <br>
+            <div>
+                <p>Jitters is a is simple Caffeine measurment tool for looking after your own daily caffeine intake.</p>
+                <br>
+                <p>To begin, set your daily limit.</p>
+                <br>
+                <p>After that simply press the + button to add more beverages to your daily count.</p>
+                <br>
+                <p>Every day when you load Jitters it will reset and you will be able to set your daily limit for how many Mg you want to intake in a day.
+                </p>
+                <br>
+                <p>Leave the page open for the whole day as when you refresh it will reset your data.
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- Trigger/Open The Modal -->
+    <button class="button" id="addDrinkModalBtn">&plus;</button>
 
     <!-- The New Drink Modal -->
     <div id="addDrinkModal" class="modal">

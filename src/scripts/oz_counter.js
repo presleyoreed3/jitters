@@ -11,7 +11,3 @@ function drawCounter() {
 	countDisplay.id = "display";
 	counter.appendChild(countDisplay);
 }
-
-function updateCounter() {
-
-}
