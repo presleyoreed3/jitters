@@ -38,6 +38,7 @@ function dailyMax(){
 	let setLimit = document.createElement("input");
 	setLimit.value = "Set you Daily Limit";
 	setLimit.type = "submit";
+	setLimit.id = "set-limit-button"
 	form.appendChild(setLimit);
 
 	// Draws the line with specified limit on click
@@ -81,5 +82,5 @@ function updateLine(newMax){
 	location.appendChild(oldLabel);
 
 	let wave = document.getElementById("wave-div");
-	
+
 }
