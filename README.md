@@ -12,15 +12,13 @@ In Jitters, users will be able to:
 
 - Input caffeinated items into a daily tracker
 - Persist data for one day that is set at the first load of the page
-- See how their caffeine levels decrease throughout the day after inputing at certain times
 - See caffeine measurements for a wide range of caffeinated drinks
-- Explore good to know information about caffeine and its affects on the body and mind
+- List of drinks consumed as you go through the day
 
 In addition, this project will include: 
 
 - A production README.md
 - Sketches and layouts of site
-- References to Caffeine database sources
 
 ## Wireframes
 
@@ -30,9 +28,6 @@ This will be the base color for the application with a bonus option to select fr
 ### Main View
 Main view of the website once logged in and showing varying levels of caffeine
 ![Main View Page](./readme_images/homepage.png)
-### Daily Dose of Jitters
-This is an area that you can click on to get a daily fun fact about caffeine
-![Daily Dose of Jitters](./readme_images/daily_dose.png)
 ### Settings
 An area to manage your settings and preferences
 ![Setting Main View](./readme_images/settings.png)
@@ -40,7 +35,7 @@ An area to manage your settings and preferences
 ## Technologies and APIs
 
 - Caffeine Informer: https://www.caffeineinformer.com
-- *More to come*
+
 
 ## Implementation Timeline
 
