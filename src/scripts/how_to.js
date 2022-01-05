@@ -1,7 +1,7 @@
 
-// let pageLoaded = window.addEventListener('load', (event) => {
-// 	popInfoModal();
-// })
+let pageLoaded = window.addEventListener('load', (event) => {
+	createSession();
+})
 
 let infoButton = document.getElementById("infoBtn");
 let infoWatcher = infoButton.addEventListener("click", (event) => {
@@ -16,4 +16,8 @@ function popInfoModal(){
 		infoModal.style.display = "none";
 	}
 
+}
+
+function createSession(){
+	
 }
