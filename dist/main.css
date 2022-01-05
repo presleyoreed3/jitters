@@ -134,6 +134,16 @@ body {
   height: 100vh;
 }
 
+#buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
 /* Button for adding a drink */
 #addDrinkModalBtn {
   margin: 15px 15px;
@@ -159,7 +169,7 @@ body {
 
 /* Button for making your daily goal */
 #logonBtn {
-  position: fixed;
+  position: relative;
   right: 0;
   margin: 15px 15px;
   padding: 15px 25px;
