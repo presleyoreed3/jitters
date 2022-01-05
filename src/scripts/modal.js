@@ -29,6 +29,16 @@ let infoSpan = document.getElementById("closeInfoModal");
 // Displays the limit modal
 // display(infoButton, infoModal, infoSpan);
 
+// For info Modal
+// Get the modal
+let listModal = document.getElementById("drinkListModal");
+// Get the button that opens the limitModal
+let listButton = document.getElementById("drinkListBtn");
+// Get the <span> element that closes the limitModal
+let listSpan = document.getElementById("closeListModal");
+// Displays the limit modal
+display(listButton, listModal, listSpan);
+
 
 function display(btn, modal, span) {
   // When the user clicks the button, open the modal 

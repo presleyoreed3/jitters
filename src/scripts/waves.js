@@ -25,6 +25,10 @@ class Wave {
         }
     }
 
+    adjustWave(){
+        
+    }
+
 }
 
-module.exports = Wave;
+export default Wave;

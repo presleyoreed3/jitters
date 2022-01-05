@@ -1,7 +1,7 @@
 
-let pageLoaded = window.addEventListener('load', (event) => {
-	popInfoModal();
-})
+// let pageLoaded = window.addEventListener('load', (event) => {
+// 	popInfoModal();
+// })
 
 let infoButton = document.getElementById("infoBtn");
 let infoWatcher = infoButton.addEventListener("click", (event) => {

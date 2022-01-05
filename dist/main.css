@@ -134,6 +134,10 @@ body {
   height: 100vh;
 }
 
+li {
+  color: #f2f2f2;
+}
+
 #buttons {
   display: flex;
   justify-content: space-between;
@@ -141,7 +145,6 @@ body {
 
 #main {
   transition: margin-left .5s;
-  padding: 16px;
 }
 
 /* Button for adding a drink */
@@ -165,6 +168,33 @@ body {
   background-color: #7E5EF2;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+/* Button for adding a drink */
+#drinkListBtn {
+  margin: 15px 15px;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #f2f2f2;
+  background-color: #6A44F2;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 9px #999;
+}
+
+#drinkListBtn:hover {background-color: #7559D9}
+
+#drinkListBtn:active {
+  background-color: #7E5EF2;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#drinkListDiv{
+  display: none;
 }
 
 /* Button for making your daily goal */
@@ -266,6 +296,7 @@ h1{
   font-size: 60px;
 }
 
+/* Add Drink Button */
 #add-drink-button {
   margin: 15px 15px;
   padding: 15px 25px;
@@ -288,6 +319,7 @@ h1{
   transform: translateY(4px);
 }
 
+/* Line Limit Button */
 #set-limit-button {
   margin: 15px 15px;
   padding: 15px 25px;

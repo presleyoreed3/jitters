@@ -64,6 +64,7 @@
                 </div>
             </div>
         </div>
+
         <div id="buttons">
             <!-- Trigger/Open The Modal -->
             <button class="button" id="addDrinkModalBtn">&plus;</button>
@@ -72,6 +73,10 @@
             <button class="button" id="logonBtn">Set Daily Limit</button>
         </div>
 
+        <div id="drinkListDiv">
+            <!-- Drink List Modal -->
+            <button class="button" id="drinkListBtn">Drink List</button>
+        </div>
 
         <!-- The New Drink Modal -->
         <div id="addDrinkModal" class="modal">
@@ -86,7 +91,7 @@
             </div>
         </div>
 
-        <!-- Modal content -->
+        <!-- Limit Modal -->
         <div id="logonModal" class="modal">
             <div class="modal-content">
                 <span class="close" id="closeLoginModal">&times;</span>
@@ -95,6 +100,16 @@
                 <form class="logon-form">
                     
                 </form>
+            </div>
+        </div>
+        <!-- List Modal -->
+        <div id="drinkListModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeListModal">&times;</span>
+                <h1>Your Drinks Today:</h1>
+                <br>
+                <ul id="drinkUL">
+                </ul>
             </div>
         </div>
 

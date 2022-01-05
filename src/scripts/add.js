@@ -1,6 +1,8 @@
-const Wave = require("./waves.js")
+import Wave from "./waves.js"
+import List from "./list.js"
 const data = require('../data/raw_data.json');
 
+let drinkList = new List();
 let form = document.getElementsByClassName("input-form")[0];
 let startButton = document.getElementById("addDrinkModalBtn");
 let wave = new Wave();
@@ -251,6 +253,10 @@ function addSubmit(drink, ozs, category){
 		let modal = document.getElementById("addDrinkModal");
 		modal.style.display = "none";
 		clearSubmittion();
+
+		// Adds the drink to the drink list
+		drinkList.addDrink(drink, ozs, finalMgCount);
+		drinkList.display();
 	})
 
 }
