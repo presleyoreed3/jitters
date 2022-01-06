@@ -1,8 +1,6 @@
 # Jitters
 ### A caffeine management tool for everyone
-
-## Live Deployment
-http://presleyoreed.com/jitters/
+**[Live Deployment](http://presleyoreed.com/jitters/)**
 
 ## Description
 Jitters is an online JavaScript project created for educational puproses at App Academy. The core idea behind the project is a caffeine tracking application focused on one's individual caffeine intake. 
