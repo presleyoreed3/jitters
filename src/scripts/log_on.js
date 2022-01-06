@@ -1,4 +1,4 @@
-
+import Wave from "./waves.js"
 let form = document.getElementsByClassName("logon-form")[0];
 
 let welcome = document.createElement("h3");
@@ -77,11 +77,32 @@ function setLine(maxValue){
 function updateLine(newMax){
 
 	let oldLabel = document.getElementsByClassName("mgMax")[0];
-	oldLabel.innerHTML = `Your Daily Max: ${newMax}Mg`;
+	oldLabel.innerHTML = `Your Daily Max: ${newMax} mg`;
 	let location = document.querySelector("#limit-line");
 	oldLabel.dataset.mgValue = newMax;
 	location.appendChild(oldLabel);
+	let wave = new Wave();
+	let waveDiv = document.getElementById("wave-div");
+	let currentMG = waveDiv.dataset.currentMg;
+	let waveRaiseAmount = (currentMG/newMax);
+	let percentage = Math.floor(waveRaiseAmount * .75 * 100);
+	wave.raise(percentage);
 
-	let wave = document.getElementById("wave-div");
+	// // Does the math and raises the wave by the appropriate amount
+	// let finalMgCount = ozs * mgPerOz;
+	// let waveRaiseAmount = (finalMgCount/limitMg);
+	// let percentage = Math.floor(waveRaiseAmount * .75 * 100);
+	// let waveElement = document.querySelector("#wave-div");
+	// let currentCount = waveElement.dataset.currentMg
+	// currentCount = parseInt(currentCount);
+	// currentCount += finalMgCount;
+	// waveElement.dataset.currentMg = currentCount;
+	// let counter = document.querySelector("#display");
+	// counter.innerHTML = `Current Amount: ${currentCount.toFixed(2)} mg`;
+
+	// // Makes wave to raise;
+	// wave.raise(percentage);
+	// let modal = document.getElementById("addDrinkModal");
+	// modal.style.display = "none";
 
 }

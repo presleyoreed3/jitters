@@ -19,15 +19,16 @@ class Wave {
         let currentValue = currentHeight.dataset.currentMg;
         maxValue = parseInt(maxValue);
         currentValue = parseInt(currentValue);
+        console.log(currentValue >= maxValue);
         if (currentValue >= maxValue){
             maxHeight.style.color = "#f2f2f2"
             maxHeight.style.textShadow = "2px 2px #6A44F2";
+        } else {
+            maxHeight.style.color = "#6A44F2";
+            maxHeight.style.textShadow = "none";
         }
     }
 
-    adjustWave(){
-        
-    }
 
 }
 
