@@ -184,14 +184,23 @@ function makeDrinkSlider(drink, category){
 	slideValues.value = "16";
 	ozSlider.appendChild(slideValues);
 
+	// Gets the mg/oz of a drink
+	let mgPerOz;
+	for (const drinkData in category) {
+		if (drinkData === drink){
+			mgPerOz = category[drinkData].mgPerOz;
+		}
+	}
+
 	//Makes the label to display current slider value in oz
 	let ozLabel = document.createElement("p");
 	ozLabel.id = "oz-label";
-	ozLabel.innerHTML = `${slideValues.value} Oz.`;
+	let total = slideValues.value * mgPerOz
+	ozLabel.innerHTML = `${slideValues.value} Oz. of ${drink} has ${(slideValues.value * mgPerOz).toFixed(2)}Mg. of Caffeine`;
 	let finalValue = slideValues.value
 	slideValues.oninput = function() {
 		finalValue = this.value
-		ozLabel.innerHTML = `${this.value} Oz.`;
+		ozLabel.innerHTML = `${this.value} Oz. of ${drink} has ${(slideValues.value * mgPerOz).toFixed(2)}Mg. of Caffeine`;
 	}
 	ozSlider.appendChild(ozLabel);
 	form.appendChild(ozSlider);
@@ -243,7 +252,19 @@ function addSubmit(drink, ozs, category){
 	currentCount += finalMgCount;
 	waveElement.dataset.currentMg = currentCount;
 	let counter = document.querySelector("#display");
-	counter.innerHTML = `Current Amount: ${currentCount}Mg`;
+	counter.innerHTML = `Current Amount: ${currentCount.toFixed(2)}Mg`;
+
+	// let ozLabel = document.createElement("p");
+	// ozLabel.id = "oz-label";
+	// ozLabel.innerHTML = `${slideValues.value} Oz.`;
+	// let finalValue = slideValues.value
+	// slideValues.oninput = function() {
+	// 	finalValue = this.value
+	// 	ozLabel.innerHTML = `${this.value} Oz.`;
+	// }
+	// ozSlider.appendChild(ozLabel);
+	// form.appendChild(ozSlider);
+
 	// Makes wave to raise;
 	wave.raise(percentage);
 	let modal = document.getElementById("addDrinkModal");
