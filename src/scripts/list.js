@@ -28,11 +28,10 @@ class List {
 		let drinkList = document.getElementById("drinkUL");
 		this.clearList();
 		for (let i = 0; i < this.drinks.length; i++){
-			let oneDrink = document.createElement("li");
+			let oneDrink = document.createElement("p");
 			let drinkMg = parseFloat(this.drinks[i].total);
-			console.log(drinkMg);
 			drinkMg = drinkMg.toFixed(2);
-			oneDrink.innerHTML = `${this.drinks[i].drinkName}:<br />` + ` ${this.drinks[i].oz}oz.` + ` which amounts to ${drinkMg}mgs. of Caffeine`;
+			oneDrink.innerHTML = `${this.drinks[i].drinkName}:<br />` + ` ${this.drinks[i].oz} oz.` + ` which amounts to ${drinkMg} mg. of Caffeine`;
 			drinkList.appendChild(oneDrink);
 		}
 	}

@@ -196,11 +196,11 @@ function makeDrinkSlider(drink, category){
 	let ozLabel = document.createElement("p");
 	ozLabel.id = "oz-label";
 	let total = slideValues.value * mgPerOz
-	ozLabel.innerHTML = `${slideValues.value} Oz. of ${drink} has ${(slideValues.value * mgPerOz).toFixed(2)}Mg. of Caffeine`;
+	ozLabel.innerHTML = `${slideValues.value} oz. of ${drink} has ${(slideValues.value * mgPerOz).toFixed(2)} mg. of Caffeine`;
 	let finalValue = slideValues.value
 	slideValues.oninput = function() {
 		finalValue = this.value
-		ozLabel.innerHTML = `${this.value} Oz. of ${drink} has ${(slideValues.value * mgPerOz).toFixed(2)}Mg. of Caffeine`;
+		ozLabel.innerHTML = `${this.value} oz. of ${drink} has ${(slideValues.value * mgPerOz).toFixed(2)} mg. of Caffeine`;
 	}
 	ozSlider.appendChild(ozLabel);
 	form.appendChild(ozSlider);
@@ -252,7 +252,7 @@ function addSubmit(drink, ozs, category){
 	currentCount += finalMgCount;
 	waveElement.dataset.currentMg = currentCount;
 	let counter = document.querySelector("#display");
-	counter.innerHTML = `Current Amount: ${currentCount.toFixed(2)}Mg`;
+	counter.innerHTML = `Current Amount: ${currentCount.toFixed(2)} mg`;
 
 	// Makes wave to raise;
 	wave.raise(percentage);

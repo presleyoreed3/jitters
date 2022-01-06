@@ -63,7 +63,7 @@ function dailyMax(){
 function setLine(maxValue){
 
 	let valueLabel = document.createElement("h4")
-	valueLabel.innerHTML = `Your Daily Max: ${maxValue}Mg`;
+	valueLabel.innerHTML = `Your Daily Max: ${maxValue} mg`;
 	valueLabel.classList.add("mgMax")
 	valueLabel.dataset.mgValue = maxValue
 	let line = document.createElement("hr");
