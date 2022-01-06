@@ -2,7 +2,7 @@
 	position: fixed;
 	right: 10px;
 	bottom: 10px;
-	z-index: 15;
+	z-index: 10;
 }
 
 #current-oz-tracker h4 {

@@ -62,7 +62,6 @@ function makeOptionsField(type){
 
 	//Clears elements if one is already selected
 	if (document.querySelector("#drink-options")){
-		console.log("Im updating")
 		updateOptionsField(type);
 	} else {
 	

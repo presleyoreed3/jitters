@@ -281,7 +281,7 @@ li {
 .modal {
   display: none; 
   position: fixed; 
-  z-index: 1; 
+  z-index: 50; 
   padding-top: 100px; 
   left: 0;
   top: 0;
@@ -439,7 +439,7 @@ hr {
 	position: fixed;
 	right: 10px;
 	bottom: 10px;
-	z-index: 15;
+	z-index: 10;
 }
 
 #current-oz-tracker h4 {

@@ -36,13 +36,14 @@ function dailyMax(){
 
 	// Button to submit value
 	let setLimit = document.createElement("input");
-	setLimit.value = "Set you Daily Limit";
+	setLimit.value = "Set your Daily Limit";
 	setLimit.type = "submit";
 	setLimit.id = "set-limit-button"
 	form.appendChild(setLimit);
 
 	// Draws the line with specified limit on click
 	let drawLine = setLimit.addEventListener("click", (event) => {
+		event.preventDefault();
 		// Checks to see if line is already drawn
 		let existingLine = document.querySelector("#line");
 		if (existingLine){
