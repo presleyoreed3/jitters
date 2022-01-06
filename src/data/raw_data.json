@@ -18,19 +18,19 @@
       "Espresso": {
          "Size": 1.5,
          "Mg": 77,
-         "mgPerOz": 19
+         "mgPerOz": 51.3
       }
    }, 
    "tea":{
       "Green Tea": {
          "Size": 8,
          "Mg": 25,
-         "mgPerOz": 3.1
+         "mgPerOz": 2.2
       },
       "Black Tea": {
          "Size": 8,
          "Mg": 30,
-         "mgPerOz": 3.8
+         "mgPerOz": 5.2
       },
       "Matcha": {
          "Size": 8,
