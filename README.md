@@ -11,9 +11,10 @@ The majority of this project will be constructed with JavaScript. Along the back
 In Jitters, users will be able to:
 
 - Input caffeinated items into a daily tracker
-- Persist data for one day that is set at the first load of the page
+- Persist data until the page is reloaded
 - See caffeine measurements for a wide range of caffeinated drinks
 - List of drinks consumed as you go through the day
+- Adjust wave level as you add in drinks or update your caffeine limit for the session
 
 In addition, this project will include: 
 
@@ -48,10 +49,28 @@ An area to manage your settings and preferences
 
 ## Bonus Features
 ### Color Schemes
-The option to pick amongs these set of color schemes.
-
+The option to pick amongs these set of color schemes
 ![Current Color Scheme options](./readme_images/color_schemes.png)
+
+### Edit Inputs
+The ability to edit drinks once the they have been inputed
+
+### Custom Inputs
+The option to have a custom input for the drink name, ozs and the mg/oz of that drink
+
 ### Export Daily Measurements
 The ability to click a button to export your caffeine intake and history for the day for those who wish to keep more detailed records of their caffeine day over day.
 
-
+## Challenges Along the Way
+- The greatest challenge of this application was the lack of a conhesive and comprehensive caffeine measurements for all drinks that exist on the market. Not only do they vary wildly product to product but many are not required to list the precise amount of caffeine which meant I had to compile my own data and compose them into a .json file to use in this project. 
+- The wave behavior was a great challenge. While I found some guides on how to generate the waves to look the way they should growning them required some math in regards to the page size and the relative height of the line set at any screen dimenstion. Overall this was an awesome challenge and I really liked sitting down with paper and drawing it out to figure out the best way to lay things out to ensure that there was consistancy and that it looked nice for all view sizes. 
+```js 
+	// Code that does the measurements to determine the wave height
+	let finalMgCount = ozs * mgPerOz;
+	let waveRaiseAmount = (finalMgCount/limitMg);
+	// This percentage is calculated out of 75% as opposed to 100% as it is off of the line which is fixed to 75% of the height of the screen
+	let percentage = Math.floor(waveRaiseAmount * .75 * 100);
+	// I had to pass the current mg to the html element so that the counter element could read it properly when there is an update
+	let waveElement = document.querySelector("#wave-div");
+	let currentCount = waveElement.dataset.currentMg
+```
