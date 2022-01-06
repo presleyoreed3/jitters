@@ -1,6 +1,9 @@
 # Jitters
 ### A caffeine management tool for everyone
 
+## Live Deployment
+http://presleyoreed.com/jitters/
+
 ## Description
 Jitters is an online JavaScript project created for educational puproses at App Academy. The core idea behind the project is a caffeine tracking application focused on one's individual caffeine intake. 
 
@@ -21,6 +24,11 @@ In addition, this project will include:
 - A production README.md
 - Sketches and layouts of site
 
+## Use Examples
+### Low Wave Example
+![Basic Features Gif](./readme_images/basic-flow.gif)
+### High Wave Example
+![High Wave Gif](./readme_images/high-flow.gif)
 ## Wireframes
 
 ### Default Color Scheme
@@ -29,7 +37,7 @@ This will be the base color for the application with a bonus option to select fr
 ### Main View
 Main view of the website once logged in and showing varying levels of caffeine
 ![Main View Page](./readme_images/homepage.png)
-### Settings
+### Set Daily Limit
 An area to manage your settings and preferences
 ![Setting Main View](./readme_images/settings.png)
 
@@ -47,7 +55,7 @@ An area to manage your settings and preferences
 - **Wednesday 1/5:** Sin wave to show the level of caffeine throughout the day and a side measurement ticks to indicate overall caffeine levels in mg
 - **Thursday 1/6:** Final polishing and ensuring that all visuals have parity
 
-## Bonus Features
+## Future Features
 ### Color Schemes
 The option to pick amongs these set of color schemes
 ![Current Color Scheme options](./readme_images/color_schemes.png)
@@ -71,8 +79,8 @@ The ability to click a button to export your caffeine intake and history for the
 	// This percentage is calculated out of 75% as opposed to 100% as it is off of the line
 	// which is fixed to 75% of the height of the screen
 	let percentage = Math.floor(waveRaiseAmount * .75 * 100);
-	// I had to pass the current mg to the html element so that the counter element could read
-	// it properly when there is an update
+	// I had to pass the current mg to the html element so that the counter element could
+	// read it properly when there is an update
 	let waveElement = document.querySelector("#wave-div");
 	let currentCount = waveElement.dataset.currentMg
 ```
