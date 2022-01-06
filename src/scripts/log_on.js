@@ -43,6 +43,7 @@ function dailyMax(){
 
 	// Draws the line with specified limit on click
 	let drawLine = setLimit.addEventListener("click", (event) => {
+		event.preventDefault();
 		// Checks to see if line is already drawn
 		let existingLine = document.querySelector("#line");
 		if (existingLine){
