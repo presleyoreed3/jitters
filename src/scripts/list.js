@@ -32,7 +32,7 @@ class List {
 			let drinkMg = parseFloat(this.drinks[i].total);
 			console.log(drinkMg);
 			drinkMg = drinkMg.toFixed(2);
-			oneDrink.innerHTML = `${this.drinks[i].drinkName}:<br />` + ` ${this.drinks[i].oz}oz.` + ` which amount to ${drinkMg}Mgs. of Caffeine`;
+			oneDrink.innerHTML = `${this.drinks[i].drinkName}:<br />` + ` ${this.drinks[i].oz}oz.` + ` which amounts to ${drinkMg}mgs. of Caffeine`;
 			drinkList.appendChild(oneDrink);
 		}
 	}

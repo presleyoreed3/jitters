@@ -254,17 +254,6 @@ function addSubmit(drink, ozs, category){
 	let counter = document.querySelector("#display");
 	counter.innerHTML = `Current Amount: ${currentCount.toFixed(2)}Mg`;
 
-	// let ozLabel = document.createElement("p");
-	// ozLabel.id = "oz-label";
-	// ozLabel.innerHTML = `${slideValues.value} Oz.`;
-	// let finalValue = slideValues.value
-	// slideValues.oninput = function() {
-	// 	finalValue = this.value
-	// 	ozLabel.innerHTML = `${this.value} Oz.`;
-	// }
-	// ozSlider.appendChild(ozLabel);
-	// form.appendChild(ozSlider);
-
 	// Makes wave to raise;
 	wave.raise(percentage);
 	let modal = document.getElementById("addDrinkModal");
