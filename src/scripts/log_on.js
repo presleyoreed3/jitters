@@ -62,6 +62,7 @@ function dailyMax(){
 
 function setLine(maxValue){
 
+	// Sets the initial line height and amount
 	let valueLabel = document.createElement("h4")
 	valueLabel.innerHTML = `Your Daily Max: ${maxValue} mg`;
 	valueLabel.classList.add("mgMax")
@@ -80,6 +81,7 @@ function setLine(maxValue){
 
 function updateLine(newMax){
 
+	// Updates the line to reflect the new daily max
 	let oldLabel = document.getElementsByClassName("mgMax")[0];
 	oldLabel.innerHTML = `Your Daily Max: ${newMax} mg`;
 	let location = document.querySelector("#limit-line");
@@ -91,22 +93,5 @@ function updateLine(newMax){
 	let waveRaiseAmount = (currentMG/newMax);
 	let percentage = Math.floor(waveRaiseAmount * .75 * 100);
 	wave.raise(percentage);
-
-	// // Does the math and raises the wave by the appropriate amount
-	// let finalMgCount = ozs * mgPerOz;
-	// let waveRaiseAmount = (finalMgCount/limitMg);
-	// let percentage = Math.floor(waveRaiseAmount * .75 * 100);
-	// let waveElement = document.querySelector("#wave-div");
-	// let currentCount = waveElement.dataset.currentMg
-	// currentCount = parseInt(currentCount);
-	// currentCount += finalMgCount;
-	// waveElement.dataset.currentMg = currentCount;
-	// let counter = document.querySelector("#display");
-	// counter.innerHTML = `Current Amount: ${currentCount.toFixed(2)} mg`;
-
-	// // Makes wave to raise;
-	// wave.raise(percentage);
-	// let modal = document.getElementById("addDrinkModal");
-	// modal.style.display = "none";
 
 }
