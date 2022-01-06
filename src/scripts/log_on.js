@@ -72,6 +72,10 @@ function setLine(maxValue){
 	location.appendChild(line);
 	location.appendChild(valueLabel);
 
+	// Updates the line button after first entry
+	let dailyLimitBtn = document.getElementById("logonBtn");
+	dailyLimitBtn.innerHTML = "Update Daily Limit";
+
 }
 
 function updateLine(newMax){
