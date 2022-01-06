@@ -68,9 +68,11 @@ The ability to click a button to export your caffeine intake and history for the
 	// Code that does the measurements to determine the wave height
 	let finalMgCount = ozs * mgPerOz;
 	let waveRaiseAmount = (finalMgCount/limitMg);
-	// This percentage is calculated out of 75% as opposed to 100% as it is off of the line which is fixed to 75% of the height of the screen
+	// This percentage is calculated out of 75% as opposed to 100% as it is off of the line
+	// which is fixed to 75% of the height of the screen
 	let percentage = Math.floor(waveRaiseAmount * .75 * 100);
-	// I had to pass the current mg to the html element so that the counter element could read it properly when there is an update
+	// I had to pass the current mg to the html element so that the counter element could read
+	// it properly when there is an update
 	let waveElement = document.querySelector("#wave-div");
 	let currentCount = waveElement.dataset.currentMg
 ```
