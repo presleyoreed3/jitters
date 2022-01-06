@@ -7,7 +7,8 @@ drawCounter();
 function drawCounter() {
 	let amount = 0;
 	let countDisplay = document.createElement("h4");
-	countDisplay.innerHTML = `Current Amount: ${amount}Mg`;
+	console.log(amount)
+	countDisplay.innerHTML = `Current Amount: ${amount.toFixed(2)}Mg`;
 	countDisplay.id = "display";
 	counter.appendChild(countDisplay);
 }
