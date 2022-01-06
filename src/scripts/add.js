@@ -62,7 +62,6 @@ function makeOptionsField(type){
 
 	//Clears elements if one is already selected
 	if (document.querySelector("#drink-options")){
-		console.log("Im updating")
 		updateOptionsField(type);
 	} else {
 	
@@ -236,7 +235,6 @@ function addSubmit(drink, ozs, category){
 
 	// Does the math and raises the wave by the appropriate amount
 	let finalMgCount = ozs * mgPerOz;
-	console.log(ozs)
 	let waveRaiseAmount = (finalMgCount/limitMg);
 	let percentage = Math.floor(waveRaiseAmount * .75 * 100);
 	let waveElement = document.querySelector("#wave-div");
