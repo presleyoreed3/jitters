@@ -36,7 +36,7 @@ function dailyMax(){
 
 	// Button to submit value
 	let setLimit = document.createElement("input");
-	setLimit.value = "Set you Daily Limit";
+	setLimit.value = "Set your Daily Limit";
 	setLimit.type = "submit";
 	setLimit.id = "set-limit-button"
 	form.appendChild(setLimit);
