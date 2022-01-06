@@ -77,7 +77,7 @@ function setLine(maxValue){
 function updateLine(newMax){
 
 	let oldLabel = document.getElementsByClassName("mgMax")[0];
-	oldLabel.innerHTML = `Your Daily Max: ${newMax}Mg`;
+	oldLabel.innerHTML = `Your Daily Max: ${newMax} mg`;
 	let location = document.querySelector("#limit-line");
 	oldLabel.dataset.mgValue = newMax;
 	location.appendChild(oldLabel);
