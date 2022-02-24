@@ -143,6 +143,7 @@ li {
   justify-content: space-between;
 }
 
+
 #main {
   transition: margin-left .5s;
 }
@@ -447,7 +448,7 @@ hr {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/_counter.css ***!
   \*******************************************************************************************************/
 #current-oz-tracker {
-	position: fixed;
+	position: absolute;
 	right: 10px;
 	bottom: 10px;
 	z-index: 10;

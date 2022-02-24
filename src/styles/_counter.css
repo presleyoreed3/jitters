@@ -1,5 +1,5 @@
 #current-oz-tracker {
-	position: fixed;
+	position: absolute;
 	right: 10px;
 	bottom: 10px;
 	z-index: 10;

@@ -4,7 +4,7 @@
   "description": "## Description Jitters is an online JavaScript project created for educational puproses at App Academy. The core idea behind the project is a caffeine tracking application focused on one's individual caffeine intake.",
   "main": "index.js",
   "scripts": {
-    "watch": "webpack --watch --mode=development",
+    "start": "webpack --watch --mode=development",
     "build": "webpack --mode=production"
   },
   "repository": {
@@ -22,6 +22,7 @@
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
     "babel-loader": "^8.2.3",
+    "colorette": "^2.0.16",
     "core-js": "^3.20.1",
     "css-loader": "^6.5.1",
     "mini-css-extract-plugin": "^2.4.5",
