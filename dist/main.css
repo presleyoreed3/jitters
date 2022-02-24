@@ -115,6 +115,11 @@ header {
   transition: 0.3s;
 }
 
+
+#link-button:hover{
+  background-color: #7559D9;
+}
+
 .sidepanel .closebtn {
   position: absolute;
   top: 0;
